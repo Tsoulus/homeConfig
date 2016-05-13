@@ -9,19 +9,6 @@ alias wordSearch='function ws(){ find . -name "$1" -print0 | xargs -0 grep "$2";
 # Adds alias for git to create a github repo.
 git config --global alias.create '!sh -c "curl -u \"Tsoulus\" https://api.github.com/user/repos -d \"{\\\"name\\\":\\\"$1\\\"}\"" -'
 
-# Command to fix space in text sed 's/ /\\ /g' 
-
-# Start TMUX when shell opens.
-if which tmux >/dev/null 2>&1; then
-    # if no session is started, start a new session
-    test -z ${TMUX} && tmux
-
-    # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
-        tmux attach || break
-    done
-fi
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # Tell ls to be colourful
