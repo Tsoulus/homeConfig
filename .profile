@@ -2,9 +2,14 @@ alias rscp='rsync -a'
 alias rsmv='rsync -aP --remove-source-files'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # Unmounting in os x
-alias unmount='diskutil unmountDisk force'
+alias eject='diskutil unmountDisk force'
 alias la='ls -lah'
-alias wordSearch='function ws(){ find . -name "$1" -print0 | xargs -0 grep "$2"; };ws'
+alias tsm='transmission-remote -l'
+alias tsmt='transmission-remote -t"$1"'
+alias transmission='transmission-remote'
+alias tsmadd='transmission-remote --add "$1"'
+
+transmission-daemon -c ~/Downloads
 
 # Adds alias for git to create a github repo.
 git config --global alias.create '!sh -c "curl -u \"Tsoulus\" https://api.github.com/user/repos -d \"{\\\"name\\\":\\\"$1\\\"}\"" -'
