@@ -10,9 +10,6 @@ alias tsmt='transmission-remote -t"$1"'
 alias transmission='transmission-remote'
 alias tsmadd='transmission-remote --add "$1"'
 alias whatismyip='ipconfig getifaddr en0'
-
-# Adds alias for git to create a github repo.
-git config --global alias.create '!sh -c "curl -u \"Tsoulus\" https://api.github.com/user/repos -d \"{\\\"name\\\":\\\"$1\\\"}\"" -'
 ## END ALIAS ##
 
 ## EXPORT ##
